@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Warkop Cihuyy</title>
+</head>
+<body>
+    <div id="notification-area" class="notification-area"></div>
+    
+    <header class="navbar-1">
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo warkop cihuyy">
+            </div>
+
+            <div class="mobile-title">warkop cihuyy</div>
+
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-center">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li class="nav-social">
+                    <a href="https://www.instagram.com/dsriell">
+                        <img src="assets/instagram.png" alt="instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@dpersons">
+                        <img src="assets/tiktok.png" alt="tiktok">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/dsriell">
+                    <img src="assets/instagram.png" alt="instagram">
+                </a>
+                <a href="https://www.tiktok.com/@dpersons">
+                    <img src="assets/tiktok.png" alt="tiktok">
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="tampilan-home">
+            <div class="hero-content">
+                <img src="assets/logo.png" alt="logo warkop cihuyy" class="hero-logo">
+                <div class="hero-title">warkop cihuyy</div>
+            </div>
+            <div class="gradient-fade"></div>
+        </div>
+        
+        <div class="content-home" id="about">
+            <h1 class="home">Warkop Cihuyy!</h1>
+            <div class="content-inner">
+                <h3 class="about">About Us</h3>
+                <h2><strong>Your cozy spot for the best coffee and snacks in town.</strong></h2>
+                <p>Warkop Cihuyy adalah singkatan dari kesederhanaan yang merayakan kehidupan. Jauh dari hingar-bingar kedai kopi modern,
+                Warkop Cihuyy adalah tempat persembunyian otentik dengan aroma khas kopi saring dan asap rokok yang bercampur. 
+                Dindingnya mungkin dipenuhi poster lawas dan tulisan tangan, menciptakan suasana yang akrab dan tanpa batas.Di sini, 
+                tak ada pretensi. Semua orang setara mulai dari pekerja kantoran hingga seniman duduk di bangku kayu sederhana menikmati Kopi Saring Cihuyy yang strong dan Indomie "Double Mampus" yang menggugah.
+                Ini bukan sekadar tempat minum kopi; ini adalah pusat tempat obrolan mengalir deras, tawa pecah spontan, dan ide-ide terbaik sering lahir dari sebungkus rokok dan secangkir kopi panas.
+                Warkop Cihuyy adalah tempat Anda datang untuk melepaskan penat dan mengisi ulang energi positif. Sesuai namanya, setiap kunjungan adalah janji untuk mendapatkan suasana yang "Cihuyy!" ringan, gembira, dan benar-benar Indonesia.</p>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="rekom">Top Rekomendasi</h1>
+            <div class="rekom-items">
+                <div class="rekom-item">
+                    <img src="assets/kopi-saring.png" alt="Kopi Saring Cihuyy">
+                    <h3>Kopi Aren Cihuyy</h3>
+                    <p>Rp 8.000</p>
+                </div>
+                <div class="rekom-item">
+                    <img src="assets/indomie-double-mampus.png" alt="Indomie Double Mampus">
+                    <h3>Indomie Double Mampus</h3>
+                    <p>Rp 15.000</p>
+                </div>
+                <div class="rekom-item">
+                    <img src="assets/snack-pisang-goreng.png" alt="Pisang Goreng Cihuyy">
+                    <h3>Pisang Goreng Cihuyy</h3>
+                    <p>Rp 10.000</p>
+                </div>
+                <div class="rekom-item">
+                    <img src="assets/snack-tahu-goreng.png" alt="Tahu Goreng Cihuyy">
+                    <h3>Tahu Goreng Cihuyy</h3>
+                    <p>Rp 10.000</p>
+                </div>
+        </div>
+        
+        <div class="contact" id="contact">
+            <div class="contact-img">
+                <img src="assets/icon-contact.png" alt="icon contact">
+                <h1>Contact Us</h1> 
+            </div>
+            <div class="container">
+                <h2>Form Contact Warkop Cihuyy</h2>
+                <form id="pendaftaranForm">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telepon">Nomor Telepon:</label>
+                        <input type="tel" id="telepon" required pattern="[0-9]{10,14}"> 
+                    </div>
+                    
+                    <p id="pesanError"></p>
+
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
