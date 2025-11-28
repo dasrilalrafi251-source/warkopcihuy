@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
     <link rel="stylesheet" href="style.css">
-    <title>Warkop Cihuyy</title>
+    <title>Menu - Warkop Cihuyy</title>
 </head>
 <body>
     <div id="notification-area" class="notification-area"></div>
     
     <header class="navbar-1">
         <nav class="navbar">
-
             <div class="logo">
                 <img src="assets/logo.png" alt="logo warkop cihuyy">
             </div>
@@ -26,8 +25,8 @@
             </button>
 
             <ul class="nav-center">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
                 <li><a href="index.html#about">About Us</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
                 <li class="nav-social">
@@ -52,87 +51,464 @@
     </header>
     
     <main>
-        <div class="tampilan-home">
+        <div class="menu-content">
             <div class="hero-content">
                 <img src="assets/logo.png" alt="logo warkop cihuyy" class="hero-logo">
-                <div class="hero-title">warkop cihuyy</div>
+                <div class="hero-title"> Our Menu </div>
             </div>
             <div class="gradient-fade"></div>
-        </div>
+        </div>       
         
-        <div class="content-home" id="about">
-            <h1 class="home">Warkop Cihuyy!</h1>
-            <div class="content-inner">
-                <h3 class="about">About Us</h3>
-                <h2><strong>Your cozy spot for the best coffee and snacks in town.</strong></h2>
-                <p>Warkop Cihuyy adalah singkatan dari kesederhanaan yang merayakan kehidupan. Jauh dari hingar-bingar kedai kopi modern,
-                Warkop Cihuyy adalah tempat persembunyian otentik dengan aroma khas kopi saring dan asap rokok yang bercampur. 
-                Dindingnya mungkin dipenuhi poster lawas dan tulisan tangan, menciptakan suasana yang akrab dan tanpa batas.Di sini, 
-                tak ada pretensi. Semua orang setara mulai dari pekerja kantoran hingga seniman duduk di bangku kayu sederhana menikmati Kopi Saring Cihuyy yang strong dan Indomie "Double Mampus" yang menggugah.
-                Ini bukan sekadar tempat minum kopi; ini adalah pusat tempat obrolan mengalir deras, tawa pecah spontan, dan ide-ide terbaik sering lahir dari sebungkus rokok dan secangkir kopi panas.
-                Warkop Cihuyy adalah tempat Anda datang untuk melepaskan penat dan mengisi ulang energi positif. Sesuai namanya, setiap kunjungan adalah janji untuk mendapatkan suasana yang "Cihuyy!" ringan, gembira, dan benar-benar Indonesia.</p>
+        <!-- Cart Panel - Mobile Optimized -->
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2>🛒 Keranjang Pesanan</h2>
+                <button class="cart-clear-btn" id="clear-cart">Hapus Semua</button>
+            </div>
+            <div class="cart-items-list" id="cart-items">
+                <div class="cart-empty">Keranjang kosong</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">Rp 0</span>
+                </div>
+                <button class="cart-checkout-btn" id="checkout-btn" disabled>
+                    <span class="desktop-text">Pesan Sekarang</span>
+                    <span class="mobile-text">💬 Pesan ke Kasir</span>
+                </button>
             </div>
         </div>
 
-        <div>
-            <h1 class="rekom">Top Rekomendasi</h1>
-            <div class="rekom-items">
-                <div class="rekom-item">
-                    <img src="assets/kopi-saring.png" alt="Kopi Saring Cihuyy">
-                    <h3>Kopi Aren Cihuyy</h3>
-                    <p>Rp 8.000</p>
-                </div>
-                <div class="rekom-item">
-                    <img src="assets/indomie-double-mampus.png" alt="Indomie Double Mampus">
-                    <h3>Indomie Double Mampus</h3>
-                    <p>Rp 15.000</p>
-                </div>
-                <div class="rekom-item">
-                    <img src="assets/snack-pisang-goreng.png" alt="Pisang Goreng Cihuyy">
-                    <h3>Pisang Goreng Cihuyy</h3>
-                    <p>Rp 10.000</p>
-                </div>
-                <div class="rekom-item">
-                    <img src="assets/snack-tahu-goreng.png" alt="Tahu Goreng Cihuyy">
-                    <h3>Tahu Goreng Cihuyy</h3>
-                    <p>Rp 10.000</p>
-                </div>
-        </div>
-        
-        <div class="contact" id="contact">
-            <div class="contact-img">
-                <img src="assets/icon-contact.png" alt="icon contact">
-                <h1>Contact Us</h1> 
-            </div>
-            <div class="container">
-                <h2>Form Contact Warkop Cihuyy</h2>
-                <form id="pendaftaranForm">
-                    <div class="form-group">
-                        <label for="nama">Nama Lengkap:</label>
-                        <input type="text" id="nama" required>
-                    </div>
+        <section class="menu-section" id="menu">
+            <div class="menu-container">
+                <!-- Minuman (12 items) -->
+                <div class="menu-category minuman">
+                    <h2>☕ Minuman Segar</h2>
+                    <div class="menu-grid">
+                        <!-- Minuman 1-12 -->
+                        <div class="menu-item" id="kopi-aren">
+                            <img src="assets/aren.png" alt="Kopi Aren Cihuyy">
+                            <h3>Kopi Aren Cihuyy</h3>
+                            <p>Kopi spesial dengan gula aren asli dari Malang, memberikan rasa manis alami yang authentic.</p>
+                            <span class="price">Rp 18.000</span>
+                            <button class="menu-order-btn" data-id="1" data-name="Kopi Aren Cihuyy" data-price="18000" data-desc="Kopi dengan gula aren asli dan rasa yang authentic">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="telepon">Nomor Telepon:</label>
-                        <input type="tel" id="telepon" required pattern="[0-9]{10,14}"> 
-                    </div>
-                    
-                    <p id="pesanError"></p>
+                        <div class="menu-item" id="kopi-americano">
+                            <img src="assets/americano.png" alt="Kopi Americano Cihuyy">
+                            <h3>Kopi Americano</h3>
+                            <p>Espresso shot dengan air panas, rasa kopi yang kuat dan segar untuk penikmat kopi sejati.</p>
+                            <span class="price">Rp 15.000</span>
+                            <button class="menu-order-btn" data-id="2" data-name="Kopi Americano Cihuyy" data-price="15000" data-desc="Espresso shot dengan air panas">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
 
-                    <button type="submit">Kirim</button>
-                </form>
+                        <div class="menu-item" id="kopi-espresso">
+                            <img src="assets/espresso.png" alt="Kopi Espresso Cihuyy">
+                            <h3>Kopi Espresso</h3>
+                            <p>Shot kopi murni dengan crema yang sempurna, intens dan beraroma kuat.</p>
+                            <span class="price">Rp 12.000</span>
+                            <button class="menu-order-btn" data-id="3" data-name="Kopi Espresso Cihuyy" data-price="12000" data-desc="Shot kopi murni dengan crema sempurna">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="teh-tarik">
+                            <img src="assets/tehtarik.png" alt="Teh Tarik Cihuyy">
+                            <h3>Teh Tarik Special</h3>
+                            <p>Teh susu khas Malaysia yang ditarik hingga berbusa, manis dan creamy.</p>
+                            <span class="price">Rp 10.000</span>
+                            <button class="menu-order-btn" data-id="4" data-name="Teh Tarik Special" data-price="10000" data-desc="Teh susu khas Malaysia yang ditarik">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="cappuccino">
+                            <img src="assets/cappuccino.png" alt="Cappuccino Cihuyy">
+                            <h3>Cappuccino Classic</h3>
+                            <p>Perpaduan espresso, steamed milk, dan foam yang seimbang dengan taburan coklat.</p>
+                            <span class="price">Rp 20.000</span>
+                            <button class="menu-order-btn" data-id="5" data-name="Cappuccino Classic" data-price="20000" data-desc="Espresso dengan steamed milk dan foam">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="latte">
+                            <img src="assets/latte.png" alt="Latte Art Cihuyy">
+                            <h3>Latte Art Special</h3>
+                            <p>Espresso dengan steamed milk creamy dan latte art cantik di setiap sajian.</p>
+                            <span class="price">Rp 22.000</span>
+                            <button class="menu-order-btn" data-id="6" data-name="Latte Art Special" data-price="22000" data-desc="Espresso dengan steamed milk dan latte art">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="matcha-latte">
+                            <img src="assets/matcha.png" alt="Matcha Latte Cihuyy">
+                            <h3>Matcha Latte</h3>
+                            <p>Green tea premium Jepang dengan susu steamed, rasa segar dan menyehatkan.</p>
+                            <span class="price">Rp 25.000</span>
+                            <button class="menu-order-btn" data-id="7" data-name="Matcha Latte" data-price="25000" data-desc="Green tea premium dengan susu steamed">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="chocolate">
+                            <img src="assets/chocolate.png" alt="Hot Chocolate Cihuyy">
+                            <h3>Hot Chocolate</h3>
+                            <p>Coklat Belgia premium yang rich dan creamy, cocok untuk pencinta coklat.</p>
+                            <span class="price">Rp 18.000</span>
+                            <button class="menu-order-btn" data-id="8" data-name="Hot Chocolate" data-price="18000" data-desc="Coklat Belgia premium yang rich dan creamy">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="jus-alpukat">
+                            <img src="assets/alpukat.png" alt="Jus Alpukat Cihuyy">
+                            <h3>Jus Alpukat Special</h3>
+                            <p>Alpukat segar dengan susu dan gula aren, dilengkapi es krim vanilla.</p>
+                            <span class="price">Rp 16.000</span>
+                            <button class="menu-order-btn" data-id="9" data-name="Jus Alpukat Special" data-price="16000" data-desc="Alpukat segar dengan susu dan gula aren">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="jus-jeruk">
+                            <img src="assets/jeruk.png" alt="Jus Jeruk Cihuyy">
+                            <h3>Jus Jeruk Segar</h3>
+                            <p>Jeruk sunkist peras langsung, segar dan kaya vitamin C alami.</p>
+                            <span class="price">Rp 12.000</span>
+                            <button class="menu-order-btn" data-id="10" data-name="Jus Jeruk Segar" data-price="12000" data-desc="Jeruk sunkist peras langsung">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="es-kelapa">
+                            <img src="assets/kelapa.png" alt="Es Kelapa Muda Cihuyy">
+                            <h3>Es Kelapa Muda</h3>
+                            <p>Kelapa muda asli dengan es serut dan sirup cocopandan, menyegarkan.</p>
+                            <span class="price">Rp 15.000</span>
+                            <button class="menu-order-btn" data-id="11" data-name="Es Kelapa Muda" data-price="15000" data-desc="Kelapa muda asli dengan es serut">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="soda-gembira">
+                            <img src="assets/soda.png" alt="Soda Gembira Cihuyy">
+                            <h3>Soda Gembira</h3>
+                            <p>Minuman soda dengan sirup merah, susu, dan es krim, nostalgia masa kecil.</p>
+                            <span class="price">Rp 13.000</span>
+                            <button class="menu-order-btn" data-id="12" data-name="Soda Gembira" data-price="13000" data-desc="Soda dengan sirup merah, susu, dan es krim">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Makanan (10 items) -->
+                <div class="menu-category makanan">
+                    <h2>🍽️ Makanan Lezat</h2>
+                    <div class="menu-grid">
+                        <!-- Makanan 1-10 -->
+                        <div class="menu-item" id="mie-bangladesh">
+                            <img src="assets/miebangladesh.png" alt="Mie Bangladesh Cihuyy">
+                            <h3>Mie Bangladesh Special</h3>
+                            <p>Mie pedas khas Bangladesh dengan bumbu rempah lengkap dan telur ceplok.</p>
+                            <span class="price">Rp 23.000</span>
+                            <button class="menu-order-btn" data-id="13" data-name="Mie Bangladesh Special" data-price="23000" data-desc="Mie pedas khas Bangladesh dengan bumbu rempah">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="mie-double">
+                            <img src="assets/miedoublemampus.png" alt="Mie Double Mampus Cihuyy">
+                            <h3>Mie Double Mampus</h3>
+                            <p>Mie dengan level pedas ekstra, dua kali bumbu cabai untuk pecinta pedas sejati.</p>
+                            <span class="price">Rp 19.000</span>
+                            <button class="menu-order-btn" data-id="14" data-name="Mie Double Mampus" data-price="19000" data-desc="Mie dengan level pedas ekstra">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="tahu-crispy">
+                            <img src="assets/tahu.png" alt="Tahu Crispy Cihuyy">
+                            <h3>Tahu Crispy Special</h3>
+                            <p>Tahu goreng crispy dengan isian sayuran dan daging cincang, saus spesial.</p>
+                            <span class="price">Rp 12.000</span>
+                            <button class="menu-order-btn" data-id="15" data-name="Tahu Crispy Special" data-price="12000" data-desc="Tahu goreng crispy dengan isian sayuran">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="nasi-goreng">
+                            <img src="assets/nasigoreng.png" alt="Nasi Goreng Special Cihuyy">
+                            <h3>Nasi Goreng Special</h3>
+                            <p>Nasi goreng dengan ayam suwir, udang, dan telur, dilengkapi kerupuk.</p>
+                            <span class="price">Rp 18.000</span>
+                            <button class="menu-order-btn" data-id="16" data-name="Nasi Goreng Special" data-price="18000" data-desc="Nasi goreng dengan ayam suwir dan udang">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="mie-ayam">
+                            <img src="assets/mieayam.png" alt="Mie Ayam Cihuyy">
+                            <h3>Mie Ayam Komplit</h3>
+                            <p>Mie ayam dengan pangsit goreng, bakso, dan sayuran segar, kuah kaldu spesial.</p>
+                            <span class="price">Rp 16.000</span>
+                            <button class="menu-order-btn" data-id="17" data-name="Mie Ayam Komplit" data-price="16000" data-desc="Mie ayam dengan pangsit dan bakso">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="sate-ayam">
+                            <img src="assets/sate.png" alt="Sate Ayam Cihuyy">
+                            <h3>Sate Ayam Madu</h3>
+                            <p>Sate ayam bakar dengan bumbu madu, disajikan dengan lontong dan bumbu kacang.</p>
+                            <span class="price">Rp 25.000</span>
+                            <button class="menu-order-btn" data-id="18" data-name="Sate Ayam Madu" data-price="25000" data-desc="Sate ayam bakar dengan bumbu madu">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="gado-gado">
+                            <img src="assets/gadogado.png" alt="Gado-gado Cihuyy">
+                            <h3>Gado-gado Tradisional</h3>
+                            <p>Sayuran segar dengan bumbu kacang authentic, dilengkapi kerupuk dan telur.</p>
+                            <span class="price">Rp 15.000</span>
+                            <button class="menu-order-btn" data-id="19" data-name="Gado-gado Tradisional" data-price="15000" data-desc="Sayuran segar dengan bumbu kacang authentic">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="ayam-geprek">
+                            <img src="assets/ayamgeprek.png" alt="Ayam Geprek Cihuyy">
+                            <h3>Ayam Geprek Super</h3>
+                            <p>Ayam crispy digeprek dengan sambal bawang super pedas, nasi putih hangat.</p>
+                            <span class="price">Rp 20.000</span>
+                            <button class="menu-order-btn" data-id="20" data-name="Ayam Geprek Super" data-price="20000" data-desc="Ayam crispy digeprek dengan sambal bawang">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="bakso-urat">
+                            <img src="assets/bakso.png" alt="Bakso Urat Cihuyy">
+                            <h3>Bakso Urat Jumbo</h3>
+                            <p>Bakso urat besar dengan kuah kaldu sapi, mie, dan sayuran segar.</p>
+                            <span class="price">Rp 17.000</span>
+                            <button class="menu-order-btn" data-id="21" data-name="Bakso Urat Jumbo" data-price="17000" data-desc="Bakso urat besar dengan kuah kaldu sapi">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="soto-ayam">
+                            <img src="assets/soto.png" alt="Soto Ayam Cihuyy">
+                            <h3>Soto Ayam Lamongan</h3>
+                            <p>Soto ayam dengan kuah kuning khas Lamongan, suwiran ayam, dan sambal terasi.</p>
+                            <span class="price">Rp 16.000</span>
+                            <button class="menu-order-btn" data-id="22" data-name="Soto Ayam Lamongan" data-price="16000" data-desc="Soto ayam dengan kuah kuning khas Lamongan">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dessert (8 items) -->
+                <div class="menu-category dessert">
+                    <h2>🍰 Dessert Manis</h2>
+                    <div class="menu-grid">
+                        <!-- Dessert 1-8 -->
+                        <div class="menu-item" id="pisang-goreng">
+                            <img src="assets/pisanggoreng.png" alt="Pisang Goreng Cihuyy">
+                            <h3>Pisang Goreng Madu</h3>
+                            <p>Pisang goreng crispy dengan madu dan taburan keju, cocok untuk cemilan.</p>
+                            <span class="price">Rp 12.000</span>
+                            <button class="menu-order-btn" data-id="23" data-name="Pisang Goreng Madu" data-price="12000" data-desc="Pisang goreng crispy dengan madu dan keju">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="pancake">
+                            <img src="assets/pancake.png" alt="Pancake Cihuyy">
+                            <h3>Pancake Berry</h3>
+                            <p>Pancake fluffy dengan buah berry segar, maple syrup, dan es krim vanilla.</p>
+                            <span class="price">Rp 22.000</span>
+                            <button class="menu-order-btn" data-id="24" data-name="Pancake Berry" data-price="22000" data-desc="Pancake fluffy dengan buah berry segar">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="waffle">
+                            <img src="assets/waffle.png" alt="Waffle Cihuyy">
+                            <h3>Waffle Chocolate</h3>
+                            <p>Waffle crispy dengan topping chocolate sauce, ice cream, dan almond slice.</p>
+                            <span class="price">Rp 25.000</span>
+                            <button class="menu-order-btn" data-id="25" data-name="Waffle Chocolate" data-price="25000" data-desc="Waffle crispy dengan topping chocolate sauce">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="es-krim">
+                            <img src="assets/eskrim.png" alt="Es Krim Cihuyy">
+                            <h3>Ice Cream Sundae</h3>
+                            <p>Es krim vanilla dan coklat dengan topping buah, kacang, dan chocolate syrup.</p>
+                            <span class="price">Rp 18.000</span>
+                            <button class="menu-order-btn" data-id="26" data-name="Ice Cream Sundae" data-price="18000" data-desc="Es krim dengan topping buah dan kacang">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="brownies">
+                            <img src="assets/brownies.png" alt="Brownies Cihuyy">
+                            <h3>Brownies Lava</h3>
+                            <p>Brownies coklat dengan lava molten di dalam, disajikan hangat dengan es krim.</p>
+                            <span class="price">Rp 20.000</span>
+                            <button class="menu-order-btn" data-id="27" data-name="Brownies Lava" data-price="20000" data-desc="Brownies coklat dengan lava molten di dalam">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="cheesecake">
+                            <img src="assets/cheesecake.png" alt="Cheesecake Cihuyy">
+                            <h3>New York Cheesecake</h3>
+                            <p>Cheesecake creamy dengan base graham cracker, topping buah berry segar.</p>
+                            <span class="price">Rp 28.000</span>
+                            <button class="menu-order-btn" data-id="28" data-name="New York Cheesecake" data-price="28000" data-desc="Cheesecake creamy dengan base graham cracker">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="tiramisu">
+                            <img src="assets/tiramisu.png" alt="Tiramisu Cihuyy">
+                            <h3>Tiramisu Classic</h3>
+                            <p>Dessert Italia dengan ladyfinger, mascarpone, kopi, dan cocoa powder.</p>
+                            <span class="price">Rp 26.000</span>
+                            <button class="menu-order-btn" data-id="29" data-name="Tiramisu Classic" data-price="26000" data-desc="Dessert Italia dengan ladyfinger dan mascarpone">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+
+                        <div class="menu-item" id="churros">
+                            <img src="assets/churros.png" alt="Churros Cihuyy">
+                            <h3>Churros Chocolate</h3>
+                            <p>Churros crispy dengan taburan gula kayu manis dan chocolate dipping sauce.</p>
+                            <span class="price">Rp 15.000</span>
+                            <button class="menu-order-btn" data-id="30" data-name="Churros Chocolate" data-price="15000" data-desc="Churros crispy dengan chocolate dipping sauce">
+                                <span class="desktop-text">Pesan</span>
+                                <span class="mobile-text">➕</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
-    
-    <footer>
-        </footer>
 
-    <script src="script.js"></script>
+    <!-- Order Modal - Mobile Optimized -->
+    <div class="modal" id="payment-modal">
+        <div class="modal-content receipt-modal-content">
+            <button class="modal-close" id="close-payment">&times;</button>
+            <div class="receipt-header">
+                <h2>Warkop Cihuyy</h2>
+                <p class="receipt-time" id="receipt-time"></p>
+            </div>
+            
+            <!-- Form Data Pemesan -->
+            <div class="customer-form">
+                <h3>📝 Data Pemesan</h3>
+                <div class="form-group">
+                    <label for="customer-name">Nama Pemesan:</label>
+                    <input type="text" id="customer-name" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="table-number">Nomor Meja:</label>
+                    <input type="number" id="table-number" placeholder="Masukkan nomor meja" min="1" required>
+                </div>
+            </div>
+            
+            <div class="receipt-body">
+                <div class="receipt-items" id="receipt-items">
+                    <!-- Items will be populated by JavaScript -->
+                </div>
+                <div class="receipt-divider"></div>
+                <div class="receipt-total">
+                    <span>Total Pembayaran:</span>
+                    <span id="receipt-total">Rp 0</span>
+                </div>
+            </div>
+            <div class="receipt-footer">
+                <p class="delivery-instruction">Pilih cara mengirim pesanan ke kasir:</p>
+                
+                <div class="delivery-options">
+                    <button class="receipt-btn whatsapp-btn" id="send-whatsapp">
+                        <span class="btn-icon">📱</span>
+                        <span class="btn-text">Kirim via WhatsApp</span>
+                    </button>
+                    <button class="receipt-btn print-btn" id="print-receipt">
+                        <span class="btn-icon">🖨️</span>
+                        <span class="btn-text">Simpan Struk</span>
+                    </button>
+                    <button class="receipt-btn secondary" id="close-receipt">
+                        <span class="btn-text">Batal</span>
+                    </button>
+                </div>
+                
+                <p class="receipt-note">*Pesanan akan disimpan di perangkat Anda</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button for Mobile -->
+    <div class="floating-cart" id="floating-cart">
+        <div class="floating-cart-icon">🛒</div>
+        <div class="floating-cart-count" id="floating-cart-count">0</div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img src="assets/logo.png" alt="Warkop Cihuyy Logo" class="footer-logo">
+            <p class="disclaimer">Disclaimer : PT. Sarana Inti Indama was Established on February 17, 2003 in Jakarta</p>
+            <p class="copyright">Copyright 2025 © Warkop Cihuyy – All Right Reserved</p>
+            <div class="footer-social-icons">
+                <a href="https://www.instagram.com/dsriell" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
+                <a href="https://www.tiktok.com/@dpersons" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- HAPUS script.js karena tidak diperlukan di halaman menu -->
+    <script src="menu.js"></script>
 </body>
 </html>
