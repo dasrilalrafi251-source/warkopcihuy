@@ -166,12 +166,12 @@ p {
 }
 
 .tampilan-home { 
-    background-image: url('assets/latar.png'); 
+    background-image: url('assets/img/latar.png'); 
 }
 
 .menu-content { 
     height: 65vh; 
-    background-image: url('assets/banner.jpg'); 
+    background-image: url('assets/img/banner.jpg'); 
 }
 
 .tampilan-home .hero-content, .menu-content .hero-content {
@@ -231,7 +231,7 @@ p {
 /* ABOUT SECTION */
 .content-home {
     width: 100%;
-    background-image: url('assets/latar1.png');
+    background-image: url('assets/img/latar1.png');
     background-size: cover;
     background-position: center right;
     padding: 60px 20px;
@@ -267,7 +267,7 @@ p {
 
 /* REKOMENDASI SECTION */
 .rekom {
-    background-image: url(assets/latar_rekom.png);
+    background-image: url(assets/img/latar_rekom.png);
     background-size: cover;
     background-position: center;
     padding: 50px 20px;
@@ -381,7 +381,7 @@ p {
 /* CONTACT SECTION */
 .contact {
     width: 100%;
-    background-image: url(assets/contact.png);
+    background-image: url(assets/img/contact.png);
     background-size: cover;
     background-position: center right;
     padding: 60px 20px;
